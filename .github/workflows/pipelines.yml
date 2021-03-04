@@ -34,7 +34,7 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_SUBSCRIPTION_SPN }}
         # Resource Group Name
-        resource-group: refinitiv-arc-rg
+        resource-group: refinitiv-sample-kt-aks
         # AKS Cluster Name
-        cluster-name: refinitiv-sample-kt-aks
+        cluster-name: refinitiv-sample-kt-cluster
 
