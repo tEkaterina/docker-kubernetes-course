@@ -29,3 +29,12 @@ jobs:
     - name: Push Image to Docker Hub
       run:
         docker push $DOCKER_REPOSITORY/$IMAGE_NAME:$IMAGE_TAG
+    - name: Azure Kubernetes set context
+      uses: Azure/aks-set-context@v1
+      with:
+        creds: ${{ secrets.AZURE_SUBSCRIPTION_SPN }}
+        # Resource Group Name
+        resource-group: refinitiv-arc-rg
+        # AKS Cluster Name
+        cluster-name: refinitiv-sample-kt-aks
+
